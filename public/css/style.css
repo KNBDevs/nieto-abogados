@@ -1,0 +1,1137 @@
+/* Restablecer estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font "Roboto" */
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Estilos generales */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  line-height: 1.5;
+  border-color: #fff !important;
+}
+
+/* Header */
+header {
+  background-color: rgb(171, 113, 89);
+  color: #fff;
+  text-align: right;
+  /* height: 250px; */
+}
+
+
+.clase{
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+}
+
+/* Estilos para el menú de navegación */
+/* Banner */
+.banda {
+  margin: 0 auto;
+  background-color: rgb(181, 151, 129);
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+  border: none;
+  position: relative; /* Ajusta la posición del div banda */
+  height: 60px; /* Establece una altura fija para la banda */
+}
+
+.headermenu {
+  margin-bottom: 0;
+}
+
+.headermenu a:hover {
+  text-decoration: none;
+  color: #695d03;
+  transition: ease .3s;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 150px;
+  padding-top: 30px;
+  gap: 5px;
+}
+
+/* Estilos para el menú responsivo */
+.menu-btn {
+  display: none; /* Oculta el botón del menú en tamaños de pantalla más grandes */
+  position: absolute; /* Ajusta el posicionamiento del botón */
+  left: 10px; /* Alinea el botón a la izquierda de la ventana */
+  top: 50%; /* Centra verticalmente el botón */
+  transform: translateY(-50%); /* Ajusta la alineación vertical */
+  z-index: 1000; /* Asegura que el botón del menú esté en una capa superior */
+  background-color:#333; /* Cambia el color de fondo del botón */
+}
+
+.menu-btn:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  z-index: 1000; /* Asegura que el ícono del menú esté en una capa superior */
+}
+
+.mobile-menu {
+  display: none; /* Oculta el menú desplegable por defecto */
+  background-color: rgb(181, 151, 129); /* Establece el mismo color de fondo que la banda */
+  padding: 10px;
+  position: absolute;
+  top: 100%; /* Ajusta el menú para que aparezca debajo del botón del menú */
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Asegura que el menú desplegable esté en una capa superior */
+}
+
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px; /* Ajusta el relleno para mostrar el menú en cascada */
+}
+
+/* Estilos para mostrar el menú desplegable cuando tiene la clase "active" */
+.headermenu.active .nav-links {
+  display: block; /* Muestra el menú desplegable */
+}
+
+/* Estilos para el menú desplegable en tamaños de pantalla más pequeños */
+@media only screen and (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Muestra el botón del menú en tamaños de pantalla más pequeños */
+  }
+
+  .nav-links {
+    display: none; /* Oculta el menú de navegación en tamaños de pantalla más pequeños */
+    position: absolute;
+    top: 100%; /* Ajusta el menú para que aparezca debajo del botón del menú */
+    left: 0;
+    width: 100%;
+    background-color: rgb(181, 151, 129); /* Establece el mismo color de fondo que la banda */
+    padding: 10px 0; /* Ajusta el relleno del menú en cascada */
+    z-index: 999; /* Asegura que el menú desplegable esté en una capa superior */
+  }
+
+  .headermenu.active .nav-links {
+    display: block; /* Muestra el menú desplegable */
+  }
+
+  .nav-links a {
+    padding: 10px 20px; /* Ajusta el relleno para mostrar el menú en cascada */
+    display: block; /* Muestra los elementos en una columna */
+    
+  }
+}
+
+/* Estilos para dispositivos grandes */
+@media only screen and (min-width: 769px) {
+  .menu-btn {
+    display: none; /* Oculta el botón del menú en tamaños de pantalla más grandes */
+  }
+
+  .nav-links {
+    display: block; /* Muestra el menú de navegación en tamaños de pantalla más grandes */
+    margin-right: 40px !important;
+  }
+}
+
+
+/* Estilos para el logotipo */
+.logo {
+  float: left; /* Alinea el logo a la izquierda */
+  margin-right: 15px;
+  margin-bottom: 20px !important;
+  width: 500px;
+}
+
+/* Estilo para el banner animado */
+
+.swiper{
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+
+
+/* Imagen margenes pagina cita.html */
+
+.banner-cita{
+  display: flex;
+  width: 100%;
+  margin-left: 10.6%;
+  padding-right: 365px;
+}
+
+/* Textos: parrafos y titulos*/
+.contenedorSobreNosotros{
+  padding: 60px;
+}
+
+.contenedorAreasPracticas{
+  padding: 60px;
+  margin-top: -50px;
+}
+
+.verMas_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  color: #333; /* Color del enlace */
+  text-decoration: none; /* Quita el subrayado */
+  margin-top: 50px;
+}
+
+.verMas_link:hover {
+  color:#695d03;
+  transition: ease 1s;
+}
+
+
+.secciones_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ensure alignment to the top */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#sobreNosotros{
+  padding-bottom: 1px;
+}
+
+.texto_izq, .texto_der {
+  width: 48%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.texto_der{
+  padding-left: 150px !important;
+}
+
+.textos {
+  margin: 0;
+  color: #555;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.lista li::before {
+  content: "\2022"; /* Unicode for bullet point */
+  color: rgb(171, 113, 89); /* Color of the bullet */
+  font-size: 1.2em; /* Size of the bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .secciones {
+    flex-direction: column;
+  }
+
+  .texto_izq, .texto_der {
+    width: 100%;
+  }
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-left: 100px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 30px;
+  font-weight:900;
+}
+
+.toptittle {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-right: 30px;
+  font-weight:900;
+  padding: 0 !important;
+
+}
+
+/* Estilos para la barra de navegación */
+
+nav a {
+  color: #fff; /* Color blanco para los enlaces */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold; /* Fuente en negrita */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos de iconos de contacto */
+
+.contact-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 10px; /* Cambiar 'right' a 'left' para alinear a la izquierda */
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+
+
+.contact-icons a {
+  display: block;
+  margin-top: 1px; /* Espacio entre los iconos */
+}
+
+.contact-icons img {
+  width: 40px; /* Ajusta el tamaño de los iconos según sea necesario */
+}
+
+
+/* Áreas de práctica */
+.secciones {
+  padding: 30px;
+  background-color: #f5f5f5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Dos columnas de igual tamaño */
+  grid-gap: 20px;
+  /* Espacio entre las columnas */
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.area h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.area p {
+  margin-bottom: 15px;
+}
+
+.area a {
+  margin-top: auto;
+  /* Coloca el enlace al final */
+  align-self: flex-end;
+  /* Alinea el enlace al final */
+  text-decoration: none;
+  color: rgb(181, 151, 129);
+}
+
+/* Localización */
+.ubicacion {
+  float: left;
+  width: 50%;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  padding-top: 20px;  
+}
+
+#map {
+  height: 300px;
+  width: auto;
+  border: solid 1px #ccc;
+  margin-left: 20px !important;
+}
+
+/* Información bajo mapa ubicación */
+
+.info_ubicacion{
+  padding: 25px;
+  font-weight:400;
+  width: 100% !important;
+  
+}
+
+.citaprevialocalizacion{
+  text-decoration: none;
+  color:#333;
+
+}
+
+.citaprevialocalizacion:hover{
+  color: #695d03;
+  transition: ease .1s;
+}
+
+/*CONTENEDORES FORMULARIOS */
+
+label {
+  display: inline-block; 
+  margin-left: 10px; 
+  width: 100px; 
+  margin-left: 7%;
+}
+
+
+input[type="text"],
+input[type="email"] {
+  width: 30%; 
+  box-sizing: border-box; 
+  padding: 5px; 
+  margin-left: 10px;
+}
+
+.contenedor_register input{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 30%;
+    margin-left: 1.8%;  
+    margin-bottom: 15px; 
+  }
+
+
+.contenedor_contacto input,
+.contenedor_contacto textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 20px);
+  margin-left: 1.8%;  
+}
+
+#info_detalles_contacto{
+  margin-left: 1.8%;
+}
+
+button {
+  display: block;
+  margin-left: 315px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+button:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+
+/* Contacto index.html*/
+.contenedor_contacto {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacto {
+  float: left;
+  width: 100%;
+  padding-left: 28px;
+  padding-top: 20px;
+  border: 1px solid #f5f5f5;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.contacto p{
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+
+.contacto form input[type="text"],
+.contacto form input[type="email"],
+.contacto form input[type="tel"],
+.contacto form textarea {
+  width: 90%;
+  /* Cambiamos el ancho a 100% para que se ajuste al contenedor */
+  box-sizing: border-box;
+  /* Incluye el padding y el borde en el ancho total */
+  display: block;
+  /* Elementos en líneas separadas */
+  margin-bottom: 10px;
+  /* Espaciado entre los elementos */
+  padding: 8px;
+}
+
+.contacto form textarea {
+  margin-left: 9px;
+  width: 90.3%;
+}
+
+
+/* Estilos adicionales para el ícono del calendario */
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 10px);
+  /* Centra verticalmente el ícono */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+/* ESTILOS PAGINA BUSQUEDA "CONSULTA DB" */
+
+.contenedor_principal_consulta {
+  display: flex;  
+  padding: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.contenedor_busqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 48%;
+}
+
+/* Estilos para la sección del formulario de búsqueda */
+.seccion_formulario_busqueda {
+  flex: 1; /* Ocupa el 50% del ancho disponible */
+  padding: 20px; /* Ajusta el espaciado */
+}
+
+/* Estilos para el formulario de búsqueda */
+.formulario-busqueda {
+  background-color: #f9f9f9; /* Color de fondo del formulario */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+
+/* Ajustes específicos del formulario previos */
+.formulario-busqueda h2 {
+  text-align: center !important;
+  margin-bottom: 20px;
+}
+
+.formulario-busqueda form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; 
+}
+
+.formulario-busqueda label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.formulario-busqueda input[type="text"],
+.formulario-busqueda input[type="email"],
+.formulario-busqueda input[type='tel'],
+.formulario-busqueda select,
+.formulario-busqueda textarea {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 20px);
+}
+
+.formulario-busqueda input[type='tel']{
+  margin-left: 12px;
+}
+
+.formulario-busqueda select {
+  appearance: none;
+}
+
+.formulario-busqueda #plazocita{
+  margin-left: 10px;
+}
+
+.formulario-busqueda #hora_cita{
+  margin-left: 13px;
+}
+
+.formulario-busqueda input[type="submit"] {
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px !important; /* Ajuste */
+  margin-left: auto; /* Ajuste */
+  margin-right: auto; /* Ajuste */
+  margin-top: 40px !important;
+}
+
+.formulario-busqueda input[type="submit"]:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+/* Estilos específicos para el formulario de búsqueda */
+.formulario-busqueda label[for="nombre"],
+.formulario-busqueda label[for="email"],
+.formulario-busqueda label[for="motivo"],
+.formulario-busqueda label[for="provincia"],
+.formulario-busqueda label[for="dia_cita"],
+.formulario-busqueda label[for="fecha_cita"] {
+  width: 100%;
+}
+
+.formulario-busqueda select[id="motivo"]{
+  width: calc(100% - 22px);
+  margin-left: 1.3% !important;
+}
+
+.formulario-busqueda input[type="date"] {
+  width: calc(100% - 22px);
+  margin-left: 2.2% !important;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+/* Estilos para el botón de envío en el formulario de búsqueda */
+.formulario-busqueda input[type="submit"] {
+  margin-top: 20px;
+  width: calc(100% - 22px);
+}
+
+/* Estilos para el contenedor de eliminación */
+.contenedor_eliminar {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 50px !important;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 21px;
+  margin-bottom: 20px;
+  width: 48%;
+}
+
+.eliminar-seccion {
+  margin-bottom: -50px;
+}
+
+.eliminar-seccion h3 {
+  
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 10% !important;
+}
+
+.eliminar-seccion label {
+  
+  font-weight: 500;
+  color: #333;
+}
+
+.imagen_consulta{
+  width: 60% !important;
+  margin-left: 170px;
+  margin-top: 110px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.eliminar-seccion input[type="text"],
+.eliminar-seccion input[type="email"],
+.eliminar-seccion select {
+  width: calc(80% - 10px);
+  padding: 8px;
+  margin: 6px 0 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.input_eliminarmiembro{
+  width: calc(80% - 10px) !important;
+  padding: 8px !important;
+  margin: 6px 0 10px 40px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important; 
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1rem !important;
+}
+
+.eliminar-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 40px;
+}
+
+.eliminar-btn:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+
+/* Estilos adicionales para la sección de registro */
+
+.contenedor_login_register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Establece la altura de la ventana */
+  margin-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 70px;
+}
+
+.contenedor_register {
+  flex: 1; /* Ocupa el 50% del ancho disponible */
+  padding: 20px; /* Ajusta el espaciado */
+}
+
+.formulario-registro {
+  background-color: #f9f9f9; /* Color de fondo del formulario */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.seccion_imagen_registro {
+  flex: 1; /* Ocupa el 50% del ancho disponible */
+  padding: 20px; /* Ajusta el espaciado */
+  text-align: center; /* Centra horizontalmente */
+}
+
+.seccion_imagen_registro img {
+  width: 86%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  max-width: 300px; /* Ancho máximo de la imagen, puedes ajustar esto según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.formulario-registro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario_login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  width: 100%;
+}
+
+.campo_container {
+  width: 100%;
+  padding: 0 20px; /* Añade margen izquierdo y derecho */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+  margin-bottom: 20px; /* Espacio entre campos */
+}
+
+.formulario_login label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.formulario_login input[type="text"],
+.formulario_login input[type="email"],
+.formulario_login input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.formulario_login input[type="submit"] {
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(100% - 40px); /* Ajusta el ancho para ocupar todo el contenedor menos el padding */
+  margin: 0 20px; /* Igual al padding de los campos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  margin-top: 20px;
+}
+
+.formulario_login input[type="submit"]:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+.seccion_imagen_registro img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+/* Estilos para el contenedor principal cita */
+.contenedor_principal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  padding-left: 6%;
+  align-items: center;
+}
+
+/* Estilos para las columnas del formulario cita */
+.column_cita_left,
+.column_cita_right {
+  width: 100%;
+  margin-right: 50px;
+  padding: 30px;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para el formulario de contacto */
+
+.contacto_cita{
+  width: 90%;
+}
+
+.contacto_cita h2 {
+  text-align: center !important;
+  margin-bottom: 20px;
+}
+
+.contacto_cita form {
+  display: flex;
+  width: 100%; /* Ajuste */
+}
+
+.contacto_cita label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.contacto_cita input[type="text"],
+.contacto_cita input[type="email"],
+.contacto_cita select,
+.contacto_cita textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 20px);
+  margin-left: 1.8%;
+}
+
+h4{
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.nota_info_cita{
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-left: 20px;
+}
+
+.nota_info_li {
+  list-style: none;
+  padding: 0;
+}
+
+.nota_info_li li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.nota_info_li li::before {
+  content: "\2022"; /* Unicode for bullet point */
+  color: rgb(171, 113, 89); /* Color of the bullet */
+  font-size: 1.2em; /* Size of the bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.recordatorio{
+  font-weight: bold;
+}
+
+.banner_contacto{
+  width: 100%;
+  padding-top: 3%;
+}
+
+#label-fechacita{
+  padding-top: -60%;
+}
+
+#diacita-select{
+  margin-left: -1%;
+  width: calc(100% - 20px);
+  height: 37px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 1px;
+  padding-left: 28px;
+  font-size: 15px;
+}
+
+#horacita-select{
+  margin-left: -1%;
+}
+
+#detalles{
+  margin-left: -0.8%;
+}
+#provincia{
+  margin-left: 1.8%;
+}
+#plazo{
+  margin-left: -.9%;
+}
+#motivo{
+  margin-left: -.8%;
+}
+
+#hora-cita{
+  margin-left: -0.8%;  
+}
+
+.contacto_cita textarea {
+  resize: vertical;
+}
+
+.contacto_cita select {
+  appearance: none;
+}
+
+/* Estilos para las secciones de cita */
+.cita input[type="text"],
+.cita select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 22px);
+  box-sizing: border-box;
+}
+
+.cita select {
+  appearance: none;
+}
+
+#calendario {
+  margin-top: 20px;
+}
+
+/* Estilos para los botones de "enviar" */
+.contacto_cita form {
+  width: 100%;
+}
+
+.boton-enviar-cita {
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px; /* Ajuste */
+  margin-left: 50%;/* Posicionar a la derecha */
+}
+
+.boton-enviar-cita:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+.boton-enviar-contacto {
+  padding: 14px !important;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px !important;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px !important; /* Ajuste */
+  margin-left: 35% !important; /* Posicionar a la derecha */
+}
+
+.boton-enviar-contacto:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+
+.boton-enviar-registro {
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px !important; /* Ajuste */
+  margin-left: 33.7% !important; /* Posicionar a la derecha */
+}
+
+.boton-enviar-registro:hover {
+  background-color: #695d03;
+  transition: ease .1s;
+}
+
+
+/* Estilos "volver arriba"*/
+
+#goUpPageRe{
+  margin-top: -60px;
+}
+
+.goUpPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Color del enlace */
+  text-decoration: none; /* Quita el subrayado */
+  margin-top: 50px;
+}
+
+.goUpPage:hover {
+  color:#695d03;
+  transition: ease 1s;
+}
+
+.goUpPageC{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Color del enlace */
+  text-decoration: none; /* Quita el subrayado */
+  margin-top: 100px;
+}
+
+
+/* Footer */
+footer {
+  background-color: rgb(171, 113, 89);
+  color: #fff;
+  padding: 30px 15px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-contact a:hover {
+  color: rgb(181, 151, 129);
+}

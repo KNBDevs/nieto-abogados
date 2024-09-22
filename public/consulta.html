@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nieto Abogados | Especialistas en Derecho Laboral</title>
+
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="toppage" class="header__container">
+            <div class="logo-wrapper">
+                <a href="index.html"><img class="logo" src="../images/logo.png" alt="Nieto Abogados"></a>
+            </div>
+        </div>
+
+        <div class="banda">
+            <button id="hamburger-menu" class="menu-btn">&#9776; Menú</button>
+            <section class="headermenu">
+                <nav id="nav-menu" class="nav-links">
+                    <a href="index.html#sobreNosotros">Sobre nosotros</a>
+                    <a href="index.html#areas_practicas">Áreas de práctica</a>
+                    <a href="contacto.html">¿Dónde estamos?</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="registro.html">Registrarse</a>
+                    <a href="cita.html">Cita</a>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+    <div class="contenedor_principal_consulta">
+        <container class="contenedor_busqueda">
+            <section class="seccion_formulario_busqueda">
+                <div class="formulario-busqueda">
+                    <h2>Buscador de citas concertadas</h2>
+                    <form action="../includes/buscar.php" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+
+                        <label for="motivo">Motivo:</label>
+                        <select class="motivo" id="motivo" name="motivo">
+                            <option value=""></option>
+                            <option value="1">Accidente laboral</option>
+                            <option value="2">Baja médica</option>
+                            <option value="3">Clasificación profesional</option>
+                            <option value="4">Conciliación de la vida familiar</option>
+                            <option value="5">Conflicto colectivo</option>
+                            <option value="6">Despido</option>
+                            <option value="7">Invalidez</option>
+                            <option value="8">Modificaciones de las condiciones de trabajo</option>
+                            <option value="9">Reclamación de cantidad</option>
+                            <option value="10">Reclamación del personal estatutario</option>
+                            <option value="11">Reclamación del personal funcionario</option>
+                            <option value="12">Sanciones</option>
+                            <option value="13">Tutela de derechos fundamentales</option>
+                        </select>
+
+                        <label for="plazo">Plazo:</label>
+                        <input id="plazocita" type="text" id="plazo" name="plazo">
+
+                        <label for="provincia">Provincia:</label>
+                        <select id="provincia" name="provincia">
+                            <option value="" selected></option>
+                            <option value="1">Almería</option>
+                            <option value="2">A Coruña</option>
+                            <option value="3">Álava</option>
+                            <option value="4">Albacete</option>
+                            <option value="5">Alicante</option>
+                            <option value="6">Asturias</option>
+                            <option value="7">Ávila</option>
+                            <option value="8">Badajoz</option>
+                            <option value="9">Barcelona</option>
+                            <option value="10">Burgos</option>
+                            <option value="11">Cáceres</option>
+                            <option value="12">Cádiz</option>
+                            <option value="13">Cantabria</option>
+                            <option value="14">Castellón</option>
+                            <option value="15">Ceuta</option>
+                            <option value="16">Ciudad Real</option>
+                            <option value="17">Córdoba</option>
+                            <option value="18">Cuenca</option>
+                            <option value="19">Gerona</option>
+                            <option value="20">Gomera</option>
+                            <option value="21">Granada</option>
+                            <option value="22">Guadalajara</option>
+                            <option value="23">Guipúzcoa</option>
+                            <option value="24">Huelva</option>
+                            <option value="25">Huesca</option>
+                            <option value="26">Ibiza</option>
+                            <option value="27">Jaén</option>
+                            <option value="28">La Palma</option>
+                            <option value="29">La Rioja</option>
+                            <option value="30">Las Palmas</option>
+                            <option value="31">León</option>
+                            <option value="32">Lérida</option>
+                            <option value="33">Lugo</option>
+                            <option value="34">Madrid</option>
+                            <option value="35">Málaga</option>
+                            <option value="36">Mallorca</option>
+                            <option value="37">Melilla</option>
+                            <option value="38">Menorca</option>
+                            <option value="39">Murcia</option>
+                            <option value="40">Navarra</option>
+                            <option value="41">Orense</option>
+                            <option value="42">Palencia</option>
+                            <option value="43">Pontevedra</option>
+                            <option value="44">Salamanca</option>
+                            <option value="45">Segovia</option>
+                            <option value="46">Sevilla</option>
+                            <option value="47">Soria</option>
+                            <option value="48">Tarragona</option>
+                            <option value="49">Tenerife</option>
+                            <option value="50">Teruel</option>
+                            <option value="51">Toledo</option>
+                            <option value="52">Valencia</option>
+                            <option value="53">Valladolid</option>
+                            <option value="54">Vizcaya</option>
+                            <option value="55">Zamora</option>
+                            <option value="56">Zaragoza</option>
+                        </select>
+
+                        <label for="fecha-cita">Día de la Cita:</label>
+                        <input type="date" id="fecha-cita" name="fecha_cita">
+
+                        <label for="hora_cita">Hora de la cita:</label>
+                        <select id="hora_cita" name="hora_cita">
+                            <option value="" selected></option>
+                            <option value="telefónica">Telefónica</option>
+                            <option value="presencial_mañanas">Presencial por la mañana (9:00-14:00)</option>
+                            <option value="presencial_tarde">Presencial por la tarde (16:00-20:00)</option>
+                        </select><br><br>
+
+                        <input type="submit" value="Buscar" onclick="mostrarPopup()">
+
+                    </form>
+                </div>
+            </section>
+
+        </container>
+
+        <container class="contenedor_eliminar">
+            <section class="eliminar-seccion">
+                <div>
+                    <h2>Eliminar cita concertada</h3>
+                    <form action="../includes/eliminar_cita.php" method="post">
+                        <label for="cita_id"></label>
+                        <input type="text" id="cita_id" name="cita_id" placeholder="Ingrese ID de la cita">
+                        <button class="eliminar-btn" type="submit" name="eliminar_cita">Eliminar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="eliminar-seccion_d">
+                <div>
+                    <h2>Eliminar miembro registrado</h3>
+                    <form action="../includes/eliminar_miembro.php" method="post">
+                        <label for="miembro_id"></label>
+                        <input class="input_eliminarmiembro" type="text" id="miembro_id" name="miembro_id" placeholder="Ingrese ID del miembro">
+                        <button class="eliminar-btn"  type="submit" name="eliminar_miembro">Eliminar</button>
+                    </form>
+                </div>
+                <img class="imagen_consulta" src="../images/consulta_img.png" alt="">
+            </section>
+        </container>
+    </div>
+
+    <p><a class="goUpPage" href="#toppage">Volver arriba</a></p>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="consulta.html">Consultas DB</a>
+                <a href="../images/construccionimg.png">Política de Privacidad</a>
+                <a href="https://noticias.juridicas.com">Actualidad Jurídica</a>
+                <a href="../images/construccionimg.png">Aviso Legal</a>
+                <a href="../images/construccionimg.png">Preguntas Frecuentes</a>
+                <a href="../images/fin_presentacion.png">Trabaja con Nosotros</a>
+            </div>
+            <div class="footer-contact">
+                <p>© 2024 Nieto Abogados | Todos los derechos reservados. Web by KNBDev.</p>
+                <p>Teléfono: +34 999 999 999</p>
+                <p>Email: <a href="mailto:email@nietoabogados.es">administracion@nietoabogados.es</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+        </script>
+
+
+<section>
+    <div class="contact-icons">
+      <a href="https://api.whatsapp.com/send?phone=+34999999999" target="_blank">
+        <img src="../images/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="mailto:email@nietoabogados.es">
+        <img src="../images/email.png" alt="Email">
+      </a>
+      <a href="tel:+34999999999">
+        <img src="../images/viber.png" alt="Teléfono">
+      </a>
+    </div>
+  </section>
+
+
+
+
+
+</body>
+
+</html>
